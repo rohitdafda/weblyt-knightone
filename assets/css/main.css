@@ -1525,6 +1525,57 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Technology Stack Section
+--------------------------------------------------------------*/
+.tech-stack .tech-category {
+  background-color: var(--surface-color);
+  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
+  padding: 40px 30px;
+  transition: all ease-in-out 0.3s;
+  border-radius: 18px;
+  border-bottom: 5px solid var(--surface-color);
+  height: 100%;
+  text-align: center;
+}
+
+.tech-stack .tech-category h4 {
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  color: var(--heading-color);
+}
+
+.tech-stack .tech-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tech-stack .tech-badge {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.tech-stack .tech-badge:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  transform: translateY(-2px);
+}
+
+@media (min-width: 1365px) {
+  .tech-stack .tech-category:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+  }
+}
+
+/*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-item + .info-item {
