@@ -3,9 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Portfolio Details - WEBLYT TECHNOLOGIES</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <title>Project Details - Weblyt Technologies</title>
+    <meta
+      name="description"
+      content="Detailed information about our software development projects."
+    />
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon" />
@@ -33,21 +35,12 @@
       href="assets/vendor/glightbox/css/glightbox.min.css"
       rel="stylesheet"
     />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
-
-    <!-- =======================================================
-  * Template Name: KnightOne
-  * Template URL: https://bootstrapmade.com/knight-simple-one-page-bootstrap-template/
-  * Updated: Oct 16 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
   </head>
 
-  <body class="portfolio-details-page">
+  <body>
     <header id="header" class="header d-flex align-items-center fixed-top">
       <div
         class="container position-relative d-flex align-items-center justify-content-between"
@@ -56,50 +49,23 @@
           href="index.html"
           class="logo d-flex align-items-center me-auto me-xl-0"
         >
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
           <h1 class="sitename">WEBLYT</h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#tech-stack">Technologies</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li class="dropdown">
-              <a href="#"
-                ><span>Dropdown</span>
-                <i class="bi bi-chevron-down toggle-dropdown"></i
-              ></a>
-              <ul>
-                <li><a href="#">Dropdown 1</a></li>
-                <li class="dropdown">
-                  <a href="#"
-                    ><span>Deep Dropdown</span>
-                    <i class="bi bi-chevron-down toggle-dropdown"></i
-                  ></a>
-                  <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
-              </ul>
-            </li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="cta-btn" href="#about">Get Started</a>
+        <a class="cta-btn" href="index.html#contact">Start Your Project</a>
       </div>
     </header>
 
@@ -111,203 +77,327 @@
         style="background-image: url(assets/img/page-title-bg.webp)"
       >
         <div class="container position-relative">
-          <h1>Portfolio Details</h1>
-          <p>
-            Esse dolorum voluptatum ullam est sint nemo et est ipsa porro
-            placeat quibusdam quia assumenda numquam molestias.
+          <h1 id="project-title">Project Details</h1>
+          <p id="project-subtitle">
+            Detailed information about our software development project.
           </p>
           <nav class="breadcrumbs">
             <ol>
               <li><a href="index.html">Home</a></li>
-              <li class="current">Portfolio Details</li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li class="current" id="breadcrumb-current">Project Details</li>
             </ol>
           </nav>
         </div>
       </div>
       <!-- End Page Title -->
 
-      <!-- Portfolio Details Section -->
-      <section id="portfolio-details" class="portfolio-details section">
-        <div class="container" data-aos="fade-up">
-          <div class="portfolio-details-slider swiper init-swiper">
-            <script type="application/json" class="swiper-config">
-              {
-                "loop": true,
-                "speed": 600,
-                "autoplay": {
-                  "delay": 5000
-                },
-                "slidesPerView": "auto",
-                "navigation": {
-                  "nextEl": ".swiper-button-next",
-                  "prevEl": ".swiper-button-prev"
-                },
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "type": "bullets",
-                  "clickable": true
-                }
-              }
-            </script>
-            <div class="swiper-wrapper align-items-center">
-              <div class="swiper-slide">
-                <img src="assets/img/portfolio/app-1.jpg" alt="" />
-              </div>
-
-              <div class="swiper-slide">
-                <img src="assets/img/portfolio/product-1.jpg" alt="" />
-              </div>
-
-              <div class="swiper-slide">
-                <img src="assets/img/portfolio/branding-1.jpg" alt="" />
-              </div>
-
-              <div class="swiper-slide">
-                <img src="assets/img/portfolio/books-1.jpg" alt="" />
-              </div>
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-pagination"></div>
-          </div>
-
-          <div class="row justify-content-between gy-4 mt-4">
-            <div class="col-lg-8" data-aos="fade-up">
-              <div class="portfolio-description">
-                <h2>This is an example of portfolio details</h2>
-                <p>
-                  Autem ipsum nam porro corporis rerum. Quis eos dolorem eos
-                  itaque inventore commodi labore quia quia. Exercitationem
-                  repudiandae officiis neque suscipit non officia eaque itaque
-                  enim. Voluptatem officia accusantium nesciunt est omnis
-                  tempora consectetur dignissimos. Sequi nulla at esse enim cum
-                  deserunt eius.
-                </p>
-                <p>
-                  Amet consequatur qui dolore veniam voluptatem voluptatem sit.
-                  Non aspernatur atque natus ut cum nam et. Praesentium error
-                  dolores rerum minus sequi quia veritatis eum. Eos et doloribus
-                  doloremque nesciunt molestiae laboriosam.
-                </p>
-
-                <div class="testimonial-item">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span
-                      >Export tempor illum tamen malis malis eram quae irure
-                      esse labore quem cillum quid cillum eram malis quorum
-                      velit fore eram velit sunt aliqua noster fugiat irure amet
-                      legam anim culpa.</span
-                    >
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <div>
-                    <img
-                      src="assets/img/testimonials/testimonials-2.jpg"
-                      class="testimonial-img"
-                      alt=""
-                    />
-                    <h3>Sara Wilsson</h3>
-                    <h4>Designer</h4>
-                  </div>
+      <!-- Project Details Section -->
+      <section id="project-details" class="project-details section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="project-content" data-aos="fade-up">
+                <div class="project-image-placeholder-large mb-4">
+                  <i id="project-icon" class="bi bi-phone"></i>
+                  <span id="project-name">Project Name</span>
                 </div>
 
-                <p>
-                  Impedit ipsum quae et aliquid doloribus et voluptatem quasi.
-                  Perspiciatis occaecati earum et magnam animi. Quibusdam non
-                  qui ea vitae suscipit vitae sunt. Repudiandae incidunt cumque
-                  minus deserunt assumenda tempore. Delectus voluptas
-                  necessitatibus est.
+                <h2 id="project-heading">Project Overview</h2>
+                <p id="project-description">
+                  This is a comprehensive software development project that
+                  showcases our expertise in modern technologies and best
+                  practices.
                 </p>
 
-                <p>
-                  Sunt voluptatum sapiente facilis quo odio aut ipsum repellat
-                  debitis. Molestiae et autem libero. Explicabo et quod
-                  necessitatibus similique quis dolor eum. Numquam eaque
-                  praesentium rem et qui nesciunt.
+                <h3>Key Features</h3>
+                <ul id="project-features">
+                  <li>Modern and responsive design</li>
+                  <li>Cross-platform compatibility</li>
+                  <li>Scalable architecture</li>
+                  <li>User-friendly interface</li>
+                </ul>
+
+                <h3>Technical Implementation</h3>
+                <p id="project-technical">
+                  Built using cutting-edge technologies and following industry
+                  best practices for optimal performance and maintainability.
                 </p>
               </div>
             </div>
 
-            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
-              <div class="portfolio-info">
-                <h3>Project information</h3>
+            <div class="col-lg-4">
+              <div class="project-info" data-aos="fade-up" data-aos-delay="100">
+                <h3>Project Information</h3>
                 <ul>
-                  <li><strong>Category</strong> Web design</li>
-                  <li><strong>Client</strong> ASU Company</li>
-                  <li><strong>Project date</strong> 01 March, 2020</li>
                   <li>
-                    <strong>Project URL</strong> <a href="#">www.example.com</a>
+                    <strong>Category:</strong>
+                    <span id="project-category">Mobile App</span>
                   </li>
                   <li>
-                    <a href="#" class="btn-visit align-self-start"
-                      >Visit Website</a
-                    >
+                    <strong>Technology:</strong>
+                    <span id="project-tech">Flutter</span>
+                  </li>
+                  <li>
+                    <strong>Platform:</strong>
+                    <span id="project-platform">Android & iOS</span>
+                  </li>
+                  <li>
+                    <strong>Status:</strong>
+                    <span class="text-success">Completed</span>
+                  </li>
+                  <li>
+                    <strong>Downloads:</strong>
+                    <span id="project-downloads">1K+</span>
+                  </li>
+                  <li>
+                    <strong>Rating:</strong>
+                    <span id="project-rating">4.5/5</span>
                   </li>
                 </ul>
+
+                <div class="project-links mt-4">
+                  <a
+                    href="#"
+                    id="play-store-link"
+                    class="btn btn-primary w-100 mb-2"
+                    target="_blank"
+                  >
+                    <i class="bi bi-google-play me-2"></i>
+                    Download on Play Store
+                  </a>
+                  <a
+                    href="portfolio.html"
+                    class="btn btn-outline-primary w-100"
+                  >
+                    <i class="bi bi-arrow-left me-2"></i>
+                    Back to Portfolio
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- /Portfolio Details Section -->
+      <!-- /Project Details Section -->
     </main>
 
     <footer id="footer" class="footer dark-background">
       <div class="container">
-        <h3 class="sitename">WEBLYT</h3>
-        <p>
-          Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni
-          eligendi fuga maxime saepe commodi placeat.
-        </p>
-        <div class="social-links d-flex justify-content-center">
-          <a href=""><i class="bi bi-twitter-x"></i></a>
-          <a href=""><i class="bi bi-facebook"></i></a>
-          <a href=""><i class="bi bi-instagram"></i></a>
-          <a href=""><i class="bi bi-skype"></i></a>
-          <a href=""><i class="bi bi-linkedin"></i></a>
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">WEBLYT</span>
+            </a>
+            <p>
+              We are a leading software development company specializing in
+              creating innovative digital solutions that drive business growth
+              and success.
+            </p>
+            <div class="social-links d-flex mt-4">
+              <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#about">About us</a></li>
+              <li><a href="index.html#services">Services</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="index.html#services">Web Development</a></li>
+              <li><a href="index.html#services">Mobile Apps</a></li>
+              <li><a href="index.html#services">Enterprise Solutions</a></li>
+              <li><a href="index.html#services">Cloud Services</a></li>
+            </ul>
+          </div>
+
+          <div
+            class="col-lg-3 col-md-12 footer-contact text-center text-md-start"
+          >
+            <h4>Contact Us</h4>
+            <p>
+              A108 Adam Street <br />
+              New York, NY 535022<br />
+              United States <br /><br />
+              <strong>Phone:</strong> +1 5589 55488 55<br />
+              <strong>Email:</strong> info@weblyt.com<br />
+            </p>
+          </div>
         </div>
-        <div class="container">
-          <div class="copyright">
-            <span>Copyright</span>
-            <strong class="px-1 sitename">WEBLYT TECHNOLOGIES</strong>
-            <span>All Rights Reserved</span>
-          </div>
-          <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you've purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-            Designed by
-            <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed
-            by <a href=“https://themewagon.com>ThemeWagon
-          </div>
+      </div>
+
+      <div class="container mt-4">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Weblyt Technologies</span></strong
+          >. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
     </footer>
 
-    <!-- Scroll Top -->
     <a
       href="#"
-      id="scroll-top"
       class="scroll-top d-flex align-items-center justify-content-center"
       ><i class="bi bi-arrow-up-short"></i
     ></a>
 
-    <!-- Preloader -->
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Project Details Script -->
+    <script>
+      // Project data
+      const projects = {
+        "wilton-green": {
+          title: "Wilton Green",
+          subtitle: "Laundry Management System",
+          category: "Business App",
+          tech: "Flutter",
+          platform: "Mobile & Web",
+          downloads: "1K+",
+          rating: "4.5/5",
+          icon: "bi-phone",
+          description:
+            "Comprehensive laundry management solution with booking system, service selection, and real-time order tracking. Built with Flutter for both mobile and web platforms.",
+          features: [
+            "Booking System with date/time selection",
+            "Service Selection with pricing tiers",
+            "Real-time Order Tracking",
+            "Profile Management",
+            "Email Notifications",
+            "Service Area Listing",
+          ],
+          technical:
+            "Built using Flutter framework with Firebase backend for real-time data synchronization, ensuring cross-platform compatibility and optimal performance.",
+          playStoreUrl:
+            "https://play.google.com/store/apps/details?id=com.app.wiltongreen",
+        },
+        keka: {
+          title: "Keka",
+          subtitle: "HR Management System",
+          category: "Enterprise App",
+          tech: "Kotlin",
+          platform: "Android",
+          downloads: "5K+",
+          rating: "4.7/5",
+          icon: "bi-people",
+          description:
+            "Powerful employee management platform with HR processes, time tracking, and workforce efficiency tools. Built with native Android Kotlin for enterprise-grade performance.",
+          features: [
+            "Employee Management",
+            "Time Tracking",
+            "HR Processes Automation",
+            "Workforce Analytics",
+            "Leave Management",
+            "Performance Tracking",
+          ],
+          technical:
+            "Developed using native Android Kotlin with enterprise-grade architecture, ensuring high performance and scalability for large organizations.",
+          playStoreUrl:
+            "https://play.google.com/store/apps/details?id=com.keka.xhr",
+        },
+        rwl: {
+          title: "RWL",
+          subtitle: "Comprehensive Fitness App",
+          category: "Fitness App",
+          tech: "Kotlin",
+          platform: "Android",
+          downloads: "4K+",
+          rating: "4.6/5",
+          icon: "bi-activity",
+          description:
+            "Comprehensive fitness app with health quizzes, workout videos, calorie tracking, and community features. Built with native Android Kotlin for optimal performance.",
+          features: [
+            "Health Quizzes",
+            "Workout Videos",
+            "Calorie Tracking",
+            "Community Features",
+            "Progress Monitoring",
+            "Personalized Plans",
+          ],
+          technical:
+            "Built with native Android Kotlin using modern architecture patterns, integrated with video streaming capabilities and real-time community features.",
+          playStoreUrl:
+            "https://play.google.com/store/apps/details?id=uk.co.disciplemedia.resultswithlucy",
+        },
+      };
+
+      // Get project from URL parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const projectId = urlParams.get("project");
+
+      // Load project data
+      if (projectId && projects[projectId]) {
+        const project = projects[projectId];
+
+        // Update page content
+        document.getElementById("project-title").textContent = project.title;
+        document.getElementById("project-subtitle").textContent =
+          project.subtitle;
+        document.getElementById("breadcrumb-current").textContent =
+          project.title;
+        document.getElementById("project-name").textContent = project.title;
+        document.getElementById(
+          "project-icon"
+        ).className = `bi ${project.icon}`;
+        document.getElementById("project-heading").textContent = project.title;
+        document.getElementById("project-description").textContent =
+          project.description;
+        document.getElementById("project-category").textContent =
+          project.category;
+        document.getElementById("project-tech").textContent = project.tech;
+        document.getElementById("project-platform").textContent =
+          project.platform;
+        document.getElementById("project-downloads").textContent =
+          project.downloads;
+        document.getElementById("project-rating").textContent = project.rating;
+        document.getElementById("project-technical").textContent =
+          project.technical;
+
+        // Update features list
+        const featuresList = document.getElementById("project-features");
+        featuresList.innerHTML = "";
+        project.features.forEach((feature) => {
+          const li = document.createElement("li");
+          li.textContent = feature;
+          featuresList.appendChild(li);
+        });
+
+        // Update Play Store link
+        const playStoreLink = document.getElementById("play-store-link");
+        if (project.playStoreUrl) {
+          playStoreLink.href = project.playStoreUrl;
+          playStoreLink.style.display = "block";
+        } else {
+          playStoreLink.style.display = "none";
+        }
+      } else {
+        // Default content for unknown projects
+        document.getElementById("project-title").textContent =
+          "Project Not Found";
+        document.getElementById("project-subtitle").textContent =
+          "The requested project could not be found.";
+      }
+    </script>
   </body>
 </html>

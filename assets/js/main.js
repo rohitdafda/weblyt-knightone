@@ -127,45 +127,69 @@
   /**
    * Init isotope layout and filters
    */
-  document.querySelectorAll(".isotope-layout").forEach(function (isotopeItem) {
-    let layout = isotopeItem.getAttribute("data-layout") ?? "masonry";
-    let filter = isotopeItem.getAttribute("data-default-filter") ?? "*";
-    let sort = isotopeItem.getAttribute("data-sort") ?? "original-order";
+  function initIsotopeLayout() {
+    document
+      .querySelectorAll(".isotope-layout")
+      .forEach(function (isotopeItem) {
+        let layout = isotopeItem.getAttribute("data-layout") ?? "masonry";
+        let filter = isotopeItem.getAttribute("data-default-filter") ?? "*";
+        let sort = isotopeItem.getAttribute("data-sort") ?? "original-order";
 
-    let initIsotope;
-    imagesLoaded(isotopeItem.querySelector(".isotope-container"), function () {
-      initIsotope = new Isotope(
-        isotopeItem.querySelector(".isotope-container"),
-        {
-          itemSelector: ".isotope-item",
-          layoutMode: layout,
-          filter: filter,
-          sortBy: sort,
-        }
-      );
-    });
+        let initIsotope;
+        const container = isotopeItem.querySelector(".isotope-container");
 
-    isotopeItem
-      .querySelectorAll(".isotope-filters li")
-      .forEach(function (filters) {
-        filters.addEventListener(
-          "click",
-          function () {
-            isotopeItem
-              .querySelector(".isotope-filters .filter-active")
-              .classList.remove("filter-active");
-            this.classList.add("filter-active");
-            initIsotope.arrange({
-              filter: this.getAttribute("data-filter"),
+        if (container) {
+          // Initialize isotope immediately if imagesLoaded is not available
+          if (typeof imagesLoaded !== "undefined") {
+            imagesLoaded(container, function () {
+              initIsotope = new Isotope(container, {
+                itemSelector: ".isotope-item",
+                layoutMode: layout,
+                filter: filter,
+                sortBy: sort,
+              });
             });
-            if (typeof aosInit === "function") {
-              aosInit();
-            }
-          },
-          false
-        );
+          } else {
+            // Fallback: initialize isotope directly
+            initIsotope = new Isotope(container, {
+              itemSelector: ".isotope-item",
+              layoutMode: layout,
+              filter: filter,
+              sortBy: sort,
+            });
+          }
+
+          // Add filter event listeners
+          isotopeItem
+            .querySelectorAll(".isotope-filters li")
+            .forEach(function (filters) {
+              filters.addEventListener(
+                "click",
+                function () {
+                  isotopeItem
+                    .querySelector(".isotope-filters .filter-active")
+                    .classList.remove("filter-active");
+                  this.classList.add("filter-active");
+
+                  if (initIsotope) {
+                    initIsotope.arrange({
+                      filter: this.getAttribute("data-filter"),
+                    });
+                  }
+
+                  if (typeof aosInit === "function") {
+                    aosInit();
+                  }
+                },
+                false
+              );
+            });
+        }
       });
-  });
+  }
+
+  // Initialize isotope on DOM load
+  document.addEventListener("DOMContentLoaded", initIsotopeLayout);
 
   /**
    * Frequently Asked Questions Toggle
@@ -239,8 +263,12 @@
       }
     });
   }
-  window.addEventListener("load", navmenuScrollspy);
-  document.addEventListener("scroll", navmenuScrollspy);
+
+  // Only run scrollspy on pages with sections (not on portfolio-details page)
+  if (!window.location.pathname.includes("portfolio-details")) {
+    window.addEventListener("load", navmenuScrollspy);
+    document.addEventListener("scroll", navmenuScrollspy);
+  }
 
   /**
    * Featured Projects Carousel
