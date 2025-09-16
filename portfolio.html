@@ -66,7 +66,6 @@
             <li><a href="index.html#services">Services</a></li>
             <li><a href="index.html#tech-stack">Technologies</a></li>
             <li><a href="portfolio.html" class="active">Portfolio</a></li>
-            <li><a href="blog.html">Blog</a></li>
             <li><a href="index.html#contact">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -328,24 +327,6 @@
           <div class="portfolio-card">
             ${featuredBadge}
             ${imageHtml}
-            <div class="portfolio-info">
-              <h4>${project.title}</h4>
-              <p>${project.category}</p>
-              <div class="tech-stack">
-                ${techStackHtml}
-              </div>
-              <div class="project-stats">
-                <span><i class="bi bi-download"></i> ${project.downloads} Downloads</span>
-                <span><i class="bi bi-star-fill"></i> ${project.rating} Rating</span>
-              </div>
-              <div class="portfolio-links">
-                ${previewLink}
-                ${playStoreLink}
-                <a href="portfolio-details.html?project=${project.id}" class="details-link">
-                  <i class="bi bi-link-45deg"></i>
-                </a>
-              </div>
-            </div>
           </div>
         `;
 
