@@ -176,30 +176,6 @@ const ProjectData = {
       technical:
         "Built with Flutter web and integrated with gaming APIs for real-time tournament management and social features.",
     },
-    leapbridge: {
-      id: "leapbridge",
-      title: "LeapBridge",
-      category: "Educational Platform",
-      description:
-        "Innovative educational platform connecting students with mentors and providing comprehensive learning resources. Built with modern web technologies.",
-      techStack: ["Flutter", "Web Platform", "Education"],
-      downloads: "1.5K+",
-      rating: "4.1",
-      featured: false,
-      image: null,
-      hasImage: false,
-      playStoreUrl: null,
-      features: [
-        "Mentor-Student Matching",
-        "Interactive Learning Modules",
-        "Progress Tracking",
-        "Resource Library",
-        "Assessment Tools",
-        "Community Learning",
-      ],
-      technical:
-        "Developed with Flutter web for responsive design and integrated with educational content management systems.",
-    },
     rwl: {
       id: "rwl",
       title: "RWL",
@@ -224,54 +200,6 @@ const ProjectData = {
       ],
       technical:
         "Built with native Android Kotlin using modern architecture patterns, integrated with video streaming capabilities and real-time community features.",
-    },
-    "mosaico-tiles": {
-      id: "mosaico-tiles",
-      title: "Mosaico Tiles",
-      category: "Design & Architecture",
-      description:
-        "Professional design and architecture platform for tile selection and interior design visualization. Built with modern web technologies.",
-      techStack: ["Flutter", "Web Platform", "Design"],
-      downloads: "2K+",
-      rating: "4.3",
-      featured: false,
-      image: null,
-      hasImage: false,
-      playStoreUrl: null,
-      features: [
-        "Tile Catalog & Selection",
-        "3D Visualization",
-        "Design Tools",
-        "Project Management",
-        "Client Collaboration",
-        "Material Calculator",
-      ],
-      technical:
-        "Built with Flutter web and integrated with 3D visualization libraries for immersive design experience.",
-    },
-    cpl: {
-      id: "cpl",
-      title: "CPL",
-      category: "Gaming & Entertainment",
-      description:
-        "Advanced gaming and entertainment platform with competitive features and community engagement. Built with modern technologies for optimal gaming experience.",
-      techStack: ["Flutter", "Web Platform", "Gaming"],
-      downloads: "3K+",
-      rating: "4.4",
-      featured: false,
-      image: null,
-      hasImage: false,
-      playStoreUrl: null,
-      features: [
-        "Competitive Gaming",
-        "Tournament System",
-        "Community Features",
-        "Achievement Tracking",
-        "Real-time Updates",
-        "Social Integration",
-      ],
-      technical:
-        "Developed with Flutter web and integrated with gaming APIs for competitive features and real-time updates.",
     },
   },
 

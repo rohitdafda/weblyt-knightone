@@ -261,113 +261,74 @@
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
+    <!-- Project Data -->
+    <script src="components/js/project-data.js"></script>
+
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
 
-    <!-- Project Details Script -->
+    <!-- Dynamic Project Details Script -->
     <script>
-      // Project data
-      const projects = {
-        "wilton-green": {
-          title: "Wilton Green",
-          subtitle: "Laundry Management System",
-          category: "Business App",
-          tech: "Flutter",
-          platform: "Mobile & Web",
-          downloads: "1K+",
-          rating: "4.5/5",
-          icon: "bi-phone",
-          description:
-            "Comprehensive laundry management solution with booking system, service selection, and real-time order tracking. Built with Flutter for both mobile and web platforms.",
-          features: [
-            "Booking System with date/time selection",
-            "Service Selection with pricing tiers",
-            "Real-time Order Tracking",
-            "Profile Management",
-            "Email Notifications",
-            "Service Area Listing",
-          ],
-          technical:
-            "Built using Flutter framework with Firebase backend for real-time data synchronization, ensuring cross-platform compatibility and optimal performance.",
-          playStoreUrl:
-            "https://play.google.com/store/apps/details?id=com.app.wiltongreen",
-        },
-        keka: {
-          title: "Keka",
-          subtitle: "HR Management System",
-          category: "Enterprise App",
-          tech: "Kotlin",
-          platform: "Android",
-          downloads: "5K+",
-          rating: "4.7/5",
-          icon: "bi-people",
-          description:
-            "Powerful employee management platform with HR processes, time tracking, and workforce efficiency tools. Built with native Android Kotlin for enterprise-grade performance.",
-          features: [
-            "Employee Management",
-            "Time Tracking",
-            "HR Processes Automation",
-            "Workforce Analytics",
-            "Leave Management",
-            "Performance Tracking",
-          ],
-          technical:
-            "Developed using native Android Kotlin with enterprise-grade architecture, ensuring high performance and scalability for large organizations.",
-          playStoreUrl:
-            "https://play.google.com/store/apps/details?id=com.keka.xhr",
-        },
-        rwl: {
-          title: "RWL",
-          subtitle: "Comprehensive Fitness App",
-          category: "Fitness App",
-          tech: "Kotlin",
-          platform: "Android",
-          downloads: "4K+",
-          rating: "4.6/5",
-          icon: "bi-activity",
-          description:
-            "Comprehensive fitness app with health quizzes, workout videos, calorie tracking, and community features. Built with native Android Kotlin for optimal performance.",
-          features: [
-            "Health Quizzes",
-            "Workout Videos",
-            "Calorie Tracking",
-            "Community Features",
-            "Progress Monitoring",
-            "Personalized Plans",
-          ],
-          technical:
-            "Built with native Android Kotlin using modern architecture patterns, integrated with video streaming capabilities and real-time community features.",
-          playStoreUrl:
-            "https://play.google.com/store/apps/details?id=uk.co.disciplemedia.resultswithlucy",
-        },
-      };
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize the dynamic project details
+        initializeDynamicProjectDetails();
+      });
 
-      // Get project from URL parameter
-      const urlParams = new URLSearchParams(window.location.search);
-      const projectId = urlParams.get("project");
+      function initializeDynamicProjectDetails() {
+        // Get project from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get("project");
 
-      // Load project data
-      if (projectId && projects[projectId]) {
-        const project = projects[projectId];
+        if (!projectId) {
+          showProjectNotFound();
+          return;
+        }
 
-        // Update page content
+        // Get project data from centralized source
+        const project = window.ProjectData.getProjectById(projectId);
+
+        if (!project) {
+          showProjectNotFound();
+          return;
+        }
+
+        // Update page content dynamically
+        updateProjectDetails(project);
+      }
+
+      function updateProjectDetails(project) {
+        // Update page title and meta
+        document.title = `${project.title} - Weblyt Technologies`;
         document.getElementById("project-title").textContent = project.title;
         document.getElementById("project-subtitle").textContent =
-          project.subtitle;
+          project.category;
         document.getElementById("breadcrumb-current").textContent =
           project.title;
+
+        // Update project image/placeholder
+        const projectImagePlaceholder = document.querySelector(
+          ".project-image-placeholder-large"
+        );
+        if (project.hasImage) {
+          projectImagePlaceholder.innerHTML = `<img src="${project.image}" class="img-fluid" alt="${project.title}" />`;
+        } else {
+          projectImagePlaceholder.innerHTML = `
+            <i class="bi ${getProjectIcon(project.category)}"></i>
+            <span>${project.title}</span>
+          `;
+        }
+
+        // Update project information
         document.getElementById("project-name").textContent = project.title;
-        document.getElementById(
-          "project-icon"
-        ).className = `bi ${project.icon}`;
         document.getElementById("project-heading").textContent = project.title;
         document.getElementById("project-description").textContent =
           project.description;
         document.getElementById("project-category").textContent =
           project.category;
-        document.getElementById("project-tech").textContent = project.tech;
+        document.getElementById("project-tech").textContent =
+          project.techStack.join(", ");
         document.getElementById("project-platform").textContent =
-          project.platform;
+          getPlatformText(project.techStack);
         document.getElementById("project-downloads").textContent =
           project.downloads;
         document.getElementById("project-rating").textContent = project.rating;
@@ -391,12 +352,80 @@
         } else {
           playStoreLink.style.display = "none";
         }
-      } else {
-        // Default content for unknown projects
+      }
+
+      function getProjectIcon(category) {
+        const iconMap = {
+          business: "bi-briefcase",
+          fitness: "bi-activity",
+          gaming: "bi-controller",
+          education: "bi-book",
+          dating: "bi-heart",
+          social: "bi-people",
+          design: "bi-palette",
+          travel: "bi-geo-alt",
+          hr: "bi-people",
+          laundry: "bi-house",
+          barter: "bi-arrow-repeat",
+        };
+
+        const categoryLower = category.toLowerCase();
+        for (const [key, icon] of Object.entries(iconMap)) {
+          if (categoryLower.includes(key)) {
+            return icon;
+          }
+        }
+        return "bi-phone"; // default icon
+      }
+
+      function getPlatformText(techStack) {
+        if (techStack.some((tech) => tech.toLowerCase().includes("flutter"))) {
+          return "Mobile & Web";
+        } else if (
+          techStack.some(
+            (tech) =>
+              tech.toLowerCase().includes("kotlin") ||
+              tech.toLowerCase().includes("android")
+          )
+        ) {
+          return "Android";
+        } else if (
+          techStack.some((tech) => tech.toLowerCase().includes("ios"))
+        ) {
+          return "iOS";
+        } else {
+          return "Web Platform";
+        }
+      }
+
+      function showProjectNotFound() {
         document.getElementById("project-title").textContent =
           "Project Not Found";
         document.getElementById("project-subtitle").textContent =
           "The requested project could not be found.";
+        document.getElementById("breadcrumb-current").textContent =
+          "Project Not Found";
+
+        // Hide the main content and show error message
+        const projectDetails = document.getElementById("project-details");
+        if (projectDetails) {
+          projectDetails.innerHTML = `
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                  <div class="error-content" data-aos="fade-up">
+                    <h2>Project Not Found</h2>
+                    <p>The project you're looking for doesn't exist or has been moved.</p>
+                    <a href="portfolio.html" class="btn btn-primary">
+                      <i class="bi bi-arrow-left me-2"></i>
+                      Back to Portfolio
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        }
       }
     </script>
   </body>
