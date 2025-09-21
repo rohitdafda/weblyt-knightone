@@ -16,7 +16,7 @@ const ProjectData = {
       downloads: "1K+",
       rating: "4.5",
       featured: true,
-      image: "assets/img/projects/wilton-green/banner.jpeg",
+      image: "assets/img/projects/wilton-green/banner.webp",
       hasImage: true,
       playStoreUrl:
         "https://play.google.com/store/apps/details?id=com.app.wiltongreen",
@@ -41,7 +41,7 @@ const ProjectData = {
       downloads: "2K+",
       rating: "4.3",
       featured: false,
-      image: "assets/img/projects/adal-badal/banner.jpeg",
+      image: "assets/img/projects/adal-badal/banner.webp",
       hasImage: true,
       playStoreUrl: null,
       features: [
@@ -65,7 +65,7 @@ const ProjectData = {
       downloads: "3K+",
       rating: "4.6",
       featured: false,
-      image: "assets/img/projects/bleexyou/banner.jpeg",
+      image: "assets/img/projects/bleexyou/banner.webp",
       hasImage: true,
       playStoreUrl: null,
       features: [
@@ -89,7 +89,7 @@ const ProjectData = {
       downloads: "5K+",
       rating: "4.7",
       featured: true,
-      image: "assets/img/projects/keka/banner.png",
+      image: "assets/img/projects/keka/banner.webp",
       hasImage: true,
       playStoreUrl:
         "https://play.google.com/store/apps/details?id=com.keka.xhr",
@@ -114,7 +114,7 @@ const ProjectData = {
       downloads: "2.5K+",
       rating: "4.4",
       featured: false,
-      image: "assets/img/projects/yogavivo/banner.jpeg",
+      image: "assets/img/projects/yogavivo/banner.webp",
       hasImage: true,
       playStoreUrl: null,
       features: [
@@ -138,7 +138,7 @@ const ProjectData = {
       downloads: "4K+",
       rating: "4.2",
       featured: false,
-      image: "assets/img/projects/live-dating/banner.png",
+      image: "assets/img/projects/live-dating/banner.webp",
       hasImage: true,
       playStoreUrl: null,
       features: [
@@ -162,7 +162,7 @@ const ProjectData = {
       downloads: "3.5K+",
       rating: "4.5",
       featured: false,
-      image: "assets/img/projects/gg11/banner.png",
+      image: "assets/img/projects/gg11/banner.webp",
       hasImage: true,
       playStoreUrl: null,
       features: [
@@ -186,7 +186,7 @@ const ProjectData = {
       downloads: "4K+",
       rating: "4.6",
       featured: true,
-      image: "assets/img/projects/rwl/banner.png",
+      image: "assets/img/projects/rwl/banner.webp",
       hasImage: true,
       playStoreUrl:
         "https://play.google.com/store/apps/details?id=uk.co.disciplemedia.resultswithlucy",
