@@ -12,7 +12,7 @@ const ProjectData = {
       category: "Laundry Management System",
       description:
         "Comprehensive laundry management solution with booking system, service selection, and real-time order tracking. Built with Flutter for both mobile and web platforms.",
-      techStack: ["Flutter", "Mobile & Web", "Firebase"],
+      techStack: ["Flutter", "Supabase"],
       downloads: "1K+",
       rating: "4.5",
       featured: true,
@@ -85,7 +85,7 @@ const ProjectData = {
       category: "HR Management System",
       description:
         "Powerful employee management platform with HR processes, time tracking, and workforce efficiency tools. Built with native Android Kotlin for enterprise-grade performance.",
-      techStack: ["Kotlin", "Android", "Enterprise"],
+      techStack: ["Kotlin", "Android"],
       downloads: "5K+",
       rating: "4.7",
       featured: true,
@@ -182,7 +182,7 @@ const ProjectData = {
       category: "Comprehensive Fitness App",
       description:
         "Comprehensive fitness app with health quizzes, workout videos, calorie tracking, and community features. Built with native Android Kotlin for optimal performance.",
-      techStack: ["Kotlin", "Android", "Fitness"],
+      techStack: ["Kotlin", "Android"],
       downloads: "4K+",
       rating: "4.6",
       featured: true,
