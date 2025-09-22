@@ -1819,6 +1819,160 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
+/* Headquarters Section Styles */
+.headquarters-section {
+  background: var(--surface-color);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.headquarters-section h3 {
+  color: var(--heading-color);
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.headquarters-card {
+  background: var(--background-color);
+  border-radius: 12px;
+  padding: 30px;
+  height: 100%;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(var(--accent-color), 0.1);
+}
+
+.headquarters-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.headquarters-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid
+    color-mix(in srgb, var(--accent-color), transparent 90%);
+}
+
+.headquarters-header i {
+  color: var(--accent-color);
+  font-size: 28px;
+  margin-right: 15px;
+}
+
+.headquarters-header h4 {
+  color: var(--heading-color);
+  font-weight: 600;
+  margin: 0;
+  font-size: 20px;
+}
+
+.headquarters-info .info-item {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.headquarters-info .info-item:last-child {
+  margin-bottom: 0;
+}
+
+.headquarters-info .info-item i {
+  color: var(--accent-color);
+  font-size: 18px;
+  margin-right: 12px;
+  margin-top: 2px;
+  min-width: 20px;
+}
+
+.headquarters-info .info-item div {
+  flex: 1;
+}
+
+.headquarters-info .info-item strong {
+  color: var(--heading-color);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.headquarters-info .info-item p {
+  color: var(--default-color);
+  margin: 0;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* Call to Action within Headquarters */
+.headquarters-section .text-center h4 {
+  color: var(--heading-color);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.headquarters-section .text-center p {
+  color: var(--default-color);
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.headquarters-section .btn {
+  padding: 12px 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.headquarters-section .btn-primary {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.headquarters-section .btn-primary:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  transform: translateY(-2px);
+}
+
+.headquarters-section .btn-outline-primary {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.headquarters-section .btn-outline-primary:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .headquarters-section {
+    padding: 30px 20px;
+  }
+
+  .headquarters-card {
+    padding: 25px 20px;
+    margin-bottom: 20px;
+  }
+
+  .headquarters-header h4 {
+    font-size: 18px;
+  }
+
+  .headquarters-section .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
