@@ -268,7 +268,22 @@
         col.innerHTML = `
           <div class="portfolio-card">
             ${featuredBadge}
-            ${imageHtml}
+            <a href="portfolio-details.html?id=${
+              project.id
+            }" class="project-link">
+              ${imageHtml}
+              <div class="project-overlay">
+                <div class="project-overlay-content">
+                  <h4>${project.title}</h4>
+                  <p>${project.category}</p>
+                  <div class="project-platforms">
+                    ${project.platform
+                      .map((p) => `<span class="platform-tag">${p}</span>`)
+                      .join("")}
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
         `;
 
