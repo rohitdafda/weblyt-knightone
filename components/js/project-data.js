@@ -13,6 +13,7 @@ const ProjectData = {
       description:
         "Comprehensive laundry management solution with booking system, service selection, and real-time order tracking. Built with Flutter for both mobile and web platforms.",
       techStack: ["Flutter", "Supabase"],
+      platform: ["Mobile", "Web"],
       downloads: "1K+",
       rating: "4.5",
       featured: true,
@@ -38,6 +39,7 @@ const ProjectData = {
       description:
         "Innovative barter exchange platform connecting users for item trading and services exchange. Built with modern web technologies for seamless user experience.",
       techStack: ["Flutter", "Web Platform", "Firebase"],
+      platform: ["Mobile"],
       downloads: "2K+",
       rating: "4.3",
       featured: false,
@@ -62,6 +64,7 @@ const ProjectData = {
       description:
         "Comprehensive business management platform with advanced analytics and workflow automation. Designed for modern enterprises seeking digital transformation.",
       techStack: ["Flutter", "Mobile & Web", "Firebase"],
+      platform: ["Mobile"],
       downloads: "3K+",
       rating: "4.6",
       featured: false,
@@ -86,6 +89,7 @@ const ProjectData = {
       description:
         "Powerful employee management platform with HR processes, time tracking, and workforce efficiency tools. Built with native Android Kotlin for enterprise-grade performance.",
       techStack: ["Kotlin", "Android"],
+      platform: ["Mobile"],
       downloads: "5K+",
       rating: "4.7",
       featured: true,
@@ -111,6 +115,7 @@ const ProjectData = {
       description:
         "Comprehensive yoga and wellness application with guided sessions, meditation, and health tracking. Built with Flutter for seamless cross-platform experience.",
       techStack: ["Flutter", "Mobile & Web", "Health"],
+      platform: ["Mobile"],
       downloads: "2.5K+",
       rating: "4.4",
       featured: false,
@@ -135,6 +140,7 @@ const ProjectData = {
       description:
         "Modern dating application with advanced matching algorithms and real-time communication features. Built with native Android for optimal performance.",
       techStack: ["Kotlin", "Android", "Real-time"],
+      platform: ["Mobile"],
       downloads: "4K+",
       rating: "4.2",
       featured: false,
@@ -159,6 +165,7 @@ const ProjectData = {
       description:
         "Comprehensive gaming platform with tournaments, leaderboards, and social features. Built with modern web technologies for engaging gaming experience.",
       techStack: ["Flutter", "Web Platform", "Gaming"],
+      platform: ["Mobile"],
       downloads: "3.5K+",
       rating: "4.5",
       featured: false,
@@ -183,6 +190,7 @@ const ProjectData = {
       description:
         "Comprehensive fitness app with health quizzes, workout videos, calorie tracking, and community features. Built with native Android Kotlin for optimal performance.",
       techStack: ["Kotlin", "Android"],
+      platform: ["Mobile"],
       downloads: "4K+",
       rating: "4.6",
       featured: true,
@@ -256,6 +264,15 @@ const ProjectData = {
    */
   getProjectsWithoutImages() {
     return Object.values(this.projects).filter((project) => !project.hasImage);
+  },
+
+  /**
+   * Get projects by platform
+   */
+  getProjectsByPlatform(platform) {
+    return Object.values(this.projects).filter((project) =>
+      project.platform.some((p) => p.toLowerCase() === platform.toLowerCase())
+    );
   },
 };
 
