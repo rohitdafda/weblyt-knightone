@@ -209,6 +209,131 @@ const ProjectData = {
       technical:
         "Built with native Android Kotlin using modern architecture patterns, integrated with video streaming capabilities and real-time community features.",
     },
+    cleanhome: {
+      id: "cleanhome",
+      title: "CleanHome",
+      category: "Home Cleaning Services",
+      description:
+        "Professional home cleaning services platform connecting customers with verified cleaning professionals. Modern web platform for booking and managing cleaning services.",
+      techStack: ["Web Platform", "Modern UI", "Booking System"],
+      platform: ["Web"],
+      downloads: "1.5K+",
+      rating: "4.4",
+      featured: false,
+      image: "assets/img/projects/clean-home/banner.webp",
+      hasImage: true,
+      playStoreUrl: null,
+      features: [
+        "Service Booking System",
+        "Professional Profiles",
+        "Customer Reviews",
+        "Service Scheduling",
+        "Payment Integration",
+        "Quality Assurance",
+      ],
+      technical:
+        "Built with modern web technologies and responsive design for seamless booking experience across all devices.",
+    },
+    "laptop-india": {
+      id: "laptop-india",
+      title: "Laptop India",
+      category: "E-commerce Platform",
+      description:
+        "Comprehensive e-commerce platform for laptop sales and services. Features product catalog, comparison tools, and customer support for laptop purchases.",
+      techStack: ["Web Platform", "E-commerce", "Product Catalog"],
+      platform: ["Web"],
+      downloads: "2K+",
+      rating: "4.3",
+      featured: false,
+      image: "assets/img/projects/laptop-india/banner.webp",
+      hasImage: true,
+      playStoreUrl: null,
+      features: [
+        "Product Catalog",
+        "Price Comparison",
+        "Customer Reviews",
+        "Technical Specifications",
+        "Purchase Assistance",
+        "After-sales Support",
+      ],
+      technical:
+        "Developed with modern web technologies and integrated e-commerce solutions for seamless shopping experience.",
+    },
+    "one-avenue-group": {
+      id: "one-avenue-group",
+      title: "One Avenue Group",
+      category: "Corporate Business Website",
+      description:
+        "Professional corporate website showcasing business services, team information, and company portfolio. Modern design with comprehensive business information.",
+      techStack: ["Web Platform", "Corporate", "Portfolio"],
+      platform: ["Web"],
+      downloads: "800+",
+      rating: "4.5",
+      featured: false,
+      image: "assets/img/projects/one-avenue-group/banner.webp",
+      hasImage: true,
+      playStoreUrl: null,
+      features: [
+        "Company Portfolio",
+        "Team Information",
+        "Service Showcase",
+        "Contact Integration",
+        "Business Information",
+        "Professional Design",
+      ],
+      technical:
+        "Built with modern web technologies and responsive design principles for professional corporate presentation.",
+    },
+    wise: {
+      id: "wise",
+      title: "Wise",
+      category: "Business Consulting Platform",
+      description:
+        "Professional business consulting platform offering expert advice, business solutions, and consulting services. Comprehensive web platform for business growth.",
+      techStack: ["Web Platform", "Consulting", "Business Solutions"],
+      platform: ["Web"],
+      downloads: "1.2K+",
+      rating: "4.6",
+      featured: false,
+      image: "assets/img/projects/wise/banner.webp",
+      hasImage: true,
+      playStoreUrl: null,
+      features: [
+        "Consulting Services",
+        "Business Solutions",
+        "Expert Profiles",
+        "Service Packages",
+        "Client Portal",
+        "Resource Center",
+      ],
+      technical:
+        "Developed with modern web technologies and integrated business management tools for comprehensive consulting services.",
+    },
+    "ysios-capital": {
+      id: "ysios-capital",
+      title: "Ysios Capital",
+      category: "Investment Platform",
+      description:
+        "Professional investment platform for capital management and investment opportunities. Comprehensive web platform for investors and financial services.",
+      techStack: ["Web Platform", "Investment", "Financial Services"],
+      platform: ["Web"],
+      downloads: "900+",
+      rating: "4.4",
+      featured: false,
+      image: "assets/img/projects/ysios-capital/banner.webp",
+      hasImage: true,
+      playStoreUrl: null,
+      features: [
+        "Investment Opportunities",
+        "Portfolio Management",
+        "Market Analysis",
+        "Financial Tools",
+        "Investor Resources",
+        "Professional Services",
+      ],
+      technical:
+        "Built with modern web technologies and integrated financial tools for comprehensive investment management.",
+    },
   },
 
   /**
@@ -273,6 +398,13 @@ const ProjectData = {
     return Object.values(this.projects).filter((project) =>
       project.platform.some((p) => p.toLowerCase() === platform.toLowerCase())
     );
+  },
+
+  /**
+   * Get web projects
+   */
+  getWebProjects() {
+    return this.getProjectsByPlatform("web");
   },
 };
 
