@@ -87,7 +87,7 @@
           <p>
             Explore our successful software development projects across various
             industries and technologies.
-          </p>  
+          </p>
         </div>
       </div>
       <!-- End Page Title -->
@@ -95,17 +95,28 @@
       <!-- Portfolio Section -->
       <section id="portfolio" class="portfolio section">
         <div class="container">
-            <div
-              class="row gy-4 isotope-container"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <!-- Portfolio items will be dynamically generated here -->
-            </div>
-            <!-- End Portfolio Container -->
+          <!-- Portfolio Filters -->
+          <div
+            class="portfolio-filters"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <ul>
+              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-mobile">Mobile</li>
+            </ul>
           </div>
-          <!-- End Isotope Layout -->
+
+          <div
+            class="row gy-4 isotope-container"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <!-- Portfolio items will be dynamically generated here -->
+          </div>
+          <!-- End Portfolio Container -->
         </div>
+        <!-- End Isotope Layout -->
       </section>
       <!-- /Portfolio Section -->
     </main>
@@ -266,6 +277,14 @@
       function getFilterClasses(project) {
         const classes = [];
 
+        // Add platform-based filters
+        if (project.platform.some((p) => p.toLowerCase() === "web")) {
+          classes.push("filter-web");
+        }
+        if (project.platform.some((p) => p.toLowerCase() === "mobile")) {
+          classes.push("filter-mobile");
+        }
+
         // Add technology-based filters
         if (
           project.techStack.some((tech) =>
@@ -343,6 +362,12 @@
         // Update filter counts
         const filterCounts = {
           all: allProjects.length,
+          web: allProjects.filter((p) =>
+            p.platform.some((plat) => plat.toLowerCase() === "web")
+          ).length,
+          mobile: allProjects.filter((p) =>
+            p.platform.some((plat) => plat.toLowerCase() === "mobile")
+          ).length,
           flutter: allProjects.filter((p) =>
             p.techStack.some((tech) => tech.toLowerCase().includes("flutter"))
           ).length,
