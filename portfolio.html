@@ -102,6 +102,7 @@
             data-aos-delay="100"
           >
             <ul>
+              <li data-filter="*" class="filter-active">All</li>
               <li data-filter=".filter-web">Web</li>
               <li data-filter=".filter-mobile">Mobile</li>
             </ul>
@@ -390,21 +391,10 @@
           gaming: allProjects.filter((p) =>
             p.category.toLowerCase().includes("gaming")
           ).length,
-          education: allProjects.filter((p) =>
-            p.category.toLowerCase().includes("education")
-          ).length,
           social: allProjects.filter(
             (p) =>
               p.category.toLowerCase().includes("dating") ||
               p.category.toLowerCase().includes("social")
-          ).length,
-          design: allProjects.filter((p) =>
-            p.category.toLowerCase().includes("design")
-          ).length,
-          travel: allProjects.filter(
-            (p) =>
-              p.category.toLowerCase().includes("travel") ||
-              p.category.toLowerCase().includes("booking")
           ).length,
         };
 
@@ -415,7 +405,15 @@
         filterButtons.forEach((button) => {
           const filter = button.getAttribute("data-filter");
           const originalText = button.textContent.split(" (")[0];
-          const count = filterCounts[filter.replace(".filter-", "")] || 0;
+          let count;
+
+          // Handle special case for "All" filter
+          if (filter === "*") {
+            count = filterCounts.all;
+          } else {
+            count = filterCounts[filter.replace(".filter-", "")] || 0;
+          }
+
           button.textContent = `${originalText} (${count})`;
         });
       }
